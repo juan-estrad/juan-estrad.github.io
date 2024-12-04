@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://kit.fontawesome.com/ed4cbfbe1f.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="images/logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                </nav>
+                <div class="header-text">
+                    <p>Computer Science Student</p>
+                    <h1>Hi, I'm <span>Juan</span><br>Estrada from Texas</h1>
+                </div>
+            </div>
+        </div>
+<!--------------------about--------------------->        
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <!--img src="images/user.png"-->
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>I'm a Computer Science graduate from the University of Houston-Clear Lake with a passion 
+                            for designing and developing innovative software solutions. I enjoy solving complex problems, learning new technologies, 
+                            and collaborating to create user-friendly and efficient applications. My experience spans mobile app 
+                            development, object-oriented programming, and understanding fundamental concepts. 
+                            I’m a fast learner, highly motivated, and eager to bring my skills and creativity into the tech field to 
+                            make a meaningful impact.</p>
+
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Programming Languages:</span><br>Java, Swift, Kotlin</li>
+                                <li><span>Frameworks and Tools: </span><br>Git, .NET, Jetpack Compose, Firebase</li>
+                                <li><span>Other Programming Languages Used: </span><br>C/C++, SQL, Assembly</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>3+ Years Of Hands-On Programming Experience</span><br>Gained experience through coursework and collaborative projects.</li>
+                                <li><span>Group Projects</span><br>Led and contributed to FitQuest, a group project that followed the complete software development lifecycle: requirements gathering, design, implementation, testing, and deployment.Collaborated with team members using GitHub for version control and project management.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>B.S. in Computer Science</span><br>University of Houston - Clear Lake (2024)</li>
+                                <li><span>A.A in General Studies </span><br>San Jacinto Community College (2019)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!------------------portfolio----------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/FitQuestLogo.png">
+                <div class="layer">
+                    <h3>FitQuest App</h3>
+                    <p>A gamified fitness tracking application built with Java, Kotlin, 
+                        Jetpack Compose, and Firebase to motivate users through rewards and challenges. 
+                        Users can log workouts, earn "flexcoins" for profile customizations, track daily streaks, 
+                        and complete challenges to improve Fallout-style stats like strength and dexterity.</p>
+                    <a href="https://github.com/juan-estrad/FitQuest"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Scanner and Parser</h3>
+                    <p>Implemented in Java that tokenizes input text and validates syntax using recursive descent parsing. 
+                        This program detects errors and ensures adherence to a predefined grammar, 
+                        demonstrating foundational concepts in compiler design.</p>
+                    <a href="https://github.com/juan-estrad/LexicalAnalyzer-Scanner"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>Social App</h3>
+                    <p>Description.</p>
+                    <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="https://github.com/juan-estrad" class="btn">See more</a>
+    </div>
+</div>
+<!------------------------------contact----------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> juanestrad516@yahoo.com</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/juan-estrad/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/juan-estrad"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/JuanEstradaResume.pdf" download class="btn btn2">Download Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Juan Estrada</p>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemeu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemeu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwP_tibMH2uUMt4yICU0G841XYH7mrBXHzwjHvVen7TqaJB0A0ySRNOmbEqfE6Ln3w1/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+    </body>
+</html>
